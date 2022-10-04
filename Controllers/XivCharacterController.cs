@@ -14,28 +14,29 @@ public class XivCharacterController : ControllerBase
     private readonly CharacterService _charServ;
 
     public XivCharacterController(ILogger<XivCharacterController> logger,
-    IConfiguration config,
-    CharacterService charServ)
+	    IConfiguration config,
+	    CharacterService charServ)
     {
-        _logger = logger;
-        _config = config;
+	_logger = logger;
+	_config = config;
 	_charServ = charServ;
     }
 
     [HttpGet]
-    public async Task<string> Get(string CharacterName)
-    {
-        var cxtr = _charServ.SearchByName(CharacterName);
-        
-        
-        
-/*
-        var profileSearchString = System.Web.HttpUtility.ParseQueryString(string.Empty);
-        profileSearchString.Add("private_key", (string)_config["apiKey"]);
-        var profileSearchStringCompiled = $"{profileUrl}{characterResult.Results.First(x => x.Server == "Malboro").ID}?{profileSearchString.ToString()}";
-        Console.WriteLine(profileSearchStringCompiled);
-*/
-        //return await (await client.GetAsync(profileSearchStringCompiled)).Content.ReadAsStringAsync();
-	return JsonSerializer.Serialize(cxtr);
-    }
+	public async Task<string> Get(string CharacterName)
+	{
+	    var cxtr = await _charServ.SearchByName(CharacterName);
+	    var relevantChar = cxtr.Results.First(x => x.Server == "Malboro");
+	    if(relevantChar == null)
+	    {
+		return "No character found!";
+	    }
+	    else {
+		var cxtrDetails = await _charServ.GetCharacterDetails(relevantChar.ID);
+		return JsonSerializer.Serialize(cxtrDetails);
+	    }
+
+
+	    return JsonSerializer.Serialize(cxtr);
+	}
 }
