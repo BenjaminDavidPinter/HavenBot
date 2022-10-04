@@ -31,6 +31,29 @@ namespace XIV.Models
 	public GearSet? GearSet {get;set;}
 
 	public int? Gender {get;set;}
+
+	public GrandCompany? GrandCompany {get;set;}
+    	
+	public int? GuardianDeity {get;set;}
+	public int ID {get;set;}
+	public string? Lang {get;set;}
+	public string? Name {get;set;}
+	public string? NamesDay {get;set;}
+	public int? ParseDate {get;set;}
+	public string? Portrait {get;set;}
+	public int? PvPTeamId {get;set;}
+	public int? Race {get;set;}
+	public string? Server {get;set;}
+	public int? Title {get;set;}
+	public bool? TitleTop {get;set;}
+	public int? Town {get;set;}
+	public int? Tribe {get;set;} 
+    }
+
+    public record class GrandCompany
+    {
+	public int? NameID {get;set;}
+	public int? RankID {get;set;}
     }
 
     public record class GearSet 
@@ -168,5 +191,13 @@ namespace XIV.Models
 	public object? Achievements { get; set; }
 	public object? AchievementsPublic { get; set; }
 	public CharacterDetail? Character { get; set; }
+	//TODO: Implement these
+	public object? FreeCompany {get;set;}
+	public object? FreeCompanyMembers {get;set;}
+	public object? Friends {get;set;}
+	public object? FriendsPublic {get;set;}
+	public object? Minions {get;set;}
+	public object? Mounts {get;set;}
+	public object? PvPTeam {get;set;}
     }
 }

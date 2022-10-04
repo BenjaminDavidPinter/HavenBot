@@ -23,6 +23,7 @@ public class XivCharacterController : ControllerBase
     }
 
     [HttpGet]
+    [Route("Get")]
     public async Task<string> Get(string CharacterName)
     {
         var cxtr = await _charServ.SearchByName(CharacterName);
