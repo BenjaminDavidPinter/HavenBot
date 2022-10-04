@@ -26,39 +26,44 @@ namespace XIV.Models
 
 	public string? FreeCompanyId {get;set;}
 	public string? FreeCompanyName {get;set;}
-	
+
+	//Gear information	
 	public GearSet? GearSet {get;set;}
+
+	public int? Gender {get;set;}
     }
 
     public record class GearSet 
     {	
 	public Attributes? Attributes {get;set;}
-	public Gear Gear {get;set;} 
+	public Gear? Gear {get;set;}
+	public string? GearKey {get;set;}
+	public int? JobID {get;set;}
+	public int Level {get;set;}  
     }
 
     public record class Gear 
     {
-	public GearItem Body {get;set;}
-	public GearItem Bracelets {get;set;}
-	public GearItem Earrings {get;set;}
-	public GearItem Feet {get;set;}
-	public GearItem Hands {get;set;}
-	public GearItem Head {get;set;}
-	public GearItem Legs {get;set;}
-	public GearItem MainHand {get;set;}
-	public GearItem Necklace {get;set;}
-	public GearItem Ring1 {get;set;}
-	public GearItem Ring2 {get;set;}
-	public GearItem SoulCrystal {get;set;} 
+	public GearItem? Body {get;set;}
+	public GearItem? Bracelets {get;set;}
+	public GearItem? Earrings {get;set;}
+	public GearItem? Feet {get;set;}
+	public GearItem? Hands {get;set;}
+	public GearItem? Head {get;set;}
+	public GearItem? Legs {get;set;}
+	public GearItem? MainHand {get;set;}
+	public GearItem? Necklace {get;set;}
+	public GearItem? Ring1 {get;set;}
+	public GearItem? Ring2 {get;set;}
+	public GearItem? SoulCrystal {get;set;} 
     }
 
     public record class GearItem
     {
 	public string? Creator {get;set;}
-	public string? Dye {get;set;}
+	public int? Dye {get;set;}
 	public int? ID {get;set;}
-	//TODO: Implement materia object (see Reference.json)
-	public Object? Materia {get;set;}
+	public List<int>? Materia {get;set;}
 	public int? Mirage {get;set;}
     }
 
