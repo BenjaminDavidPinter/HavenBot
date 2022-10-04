@@ -14,29 +14,30 @@ public class XivCharacterController : ControllerBase
     private readonly CharacterService _charServ;
 
     public XivCharacterController(ILogger<XivCharacterController> logger,
-	    IConfiguration config,
-	    CharacterService charServ)
+        IConfiguration config,
+        CharacterService charServ)
     {
-	_logger = logger;
-	_config = config;
-	_charServ = charServ;
+        _logger = logger;
+        _config = config;
+        _charServ = charServ;
     }
 
     [HttpGet]
-	public async Task<string> Get(string CharacterName)
-	{
-	    var cxtr = await _charServ.SearchByName(CharacterName);
-	    var relevantChar = cxtr.Results.First(x => x.Server == "Malboro");
-	    if(relevantChar == null)
-	    {
-		return "No character found!";
-	    }
-	    else {
-		var cxtrDetails = await _charServ.GetCharacterDetails(relevantChar.ID);
-		return JsonSerializer.Serialize(cxtrDetails);
-	    }
+    public async Task<string> Get(string CharacterName)
+    {
+        var cxtr = await _charServ.SearchByName(CharacterName);
+        var relevantChar = cxtr.Results.First(x => x.Server == "Malboro");
+        if (relevantChar == null)
+        {
+            return "No character found!";
+        }
+        else
+        {
+            var cxtrDetails = await _charServ.GetCharacterDetails(relevantChar.ID);
+            return JsonSerializer.Serialize(cxtrDetails);
+        }
 
 
-	    return JsonSerializer.Serialize(cxtr);
-	}
+        return JsonSerializer.Serialize(cxtr);
+    }
 }
