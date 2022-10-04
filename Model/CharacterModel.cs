@@ -10,21 +10,22 @@ namespace XIV.Models
         public int ResultsPerPage { get; set; }
         public int ResultsTotal { get; set; }
     }
+
     public class CharacterSearch
     {
-        public string Avatar { get; set; }
-        public int FeastMatches { get; set; }
-        public int ID { get; set; }
-        public string Lang { get; set; }
-        public string Name { get; set; }
-        public string Rank { get; set; }
-        public string RankIcon { get; set; }
-        public string Server { get; set; }
+        public string? Avatar { get; set; }
+        public int? FeastMatches { get; set; }
+        public int? ID { get; set; }
+        public string? Lang { get; set; }
+        public string? Name { get; set; }
+        public string? Rank { get; set; }
+        public string? RankIcon { get; set; }
+        public string? Server { get; set; }
     }
 
     public class CharacterSearchResponse
     {
-        public PaginationModel Pagination { get; set; }
-        public List<CharacterSearch> Results { get; set; }
+        public PaginationModel? Pagination { get; set; }
+        public List<CharacterSearch>? Results { get; set; }
     }
 }

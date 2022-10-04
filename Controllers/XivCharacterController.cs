@@ -26,18 +26,19 @@ public class XivCharacterController : ControllerBase
     public async Task<string> Get(string CharacterName)
     {
         var cxtr = await _charServ.SearchByName(CharacterName);
-        var relevantChar = cxtr.Results.First(x => x.Server == "Malboro");
-        if (relevantChar == null)
+        
+	if(cxtr == null) return "No character found!";
+	if(cxtr.Results == null) return "No character found!";
+
+	var relevantChar = cxtr.Results.First(x => x.Server == "Malboro");
+        if (relevantChar == null || !relevantChar.ID.HasValue)
         {
             return "No character found!";
         }
         else
         {
-            var cxtrDetails = await _charServ.GetCharacterDetails(relevantChar.ID);
+            var cxtrDetails = await _charServ.GetCharacterDetails(relevantChar.ID.Value);
             return JsonSerializer.Serialize(cxtrDetails);
         }
-
-
-        return JsonSerializer.Serialize(cxtr);
     }
 }

@@ -31,8 +31,8 @@ namespace XIV.Services
 
                 var response = await client.GetAsync(queryStringCompiled);
                 var responseContent = await response.Content.ReadAsStringAsync();
-                _logger.Log(LogLevel.Information, responseContent, null);
-                return JsonSerializer.Deserialize<CharacterSearchResponse>(responseContent);
+                _logger.Log(LogLevel.Information, responseContent, null!);
+                return JsonSerializer.Deserialize<CharacterSearchResponse>(responseContent) ?? null!;
             }
             catch (Exception ex)
             {
@@ -52,8 +52,8 @@ namespace XIV.Services
                 _logger.Log(LogLevel.Information, compiledDetailsSearchString, compiledDetailsSearchString);
                 var response = await client.GetAsync(compiledDetailsSearchString);
                 var responseContent = await response.Content.ReadAsStringAsync();
-                _logger.Log(LogLevel.Information, responseContent, null);
-                return JsonSerializer.Deserialize<CharacterDetailResponse>(responseContent);
+                _logger.Log(LogLevel.Information, responseContent, null!);
+                return JsonSerializer.Deserialize<CharacterDetailResponse>(responseContent) ?? null!;
             }
             catch (Exception ex)
             {
