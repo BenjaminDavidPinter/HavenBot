@@ -1,0 +1,616 @@
+{
+    "Achievements": null,
+    "AchievementsPublic": null,
+    "Character": {
+        "ActiveClassJob": {
+            "ClassID": 31,
+            "ExpLevel": 924457,
+            "ExpLevelMax": 1387000,
+            "ExpLevelTogo": 462543,
+            "IsSpecialised": false,
+            "JobID": 31,
+            "Level": 60,
+            "Name": "machinist \/ machinist",
+            "UnlockedState": {
+                "ID": 31,
+                "Name": "Machinist"
+            }
+        },
+        "Avatar": "https:\/\/img2.finalfantasyxiv.com\/f\/f45e624dc464457a1bfabb9e0bdb5517_2e97c13fdd593d15d543093f8a37b6f0fc0_96x96.jpg?1664840086",
+        "Bio": "-",
+        "ClassJobs": [
+            {
+                "ClassID": 1,
+                "ExpLevel": 282473,
+                "ExpLevelMax": 1621000,
+                "ExpLevelTogo": 1338527,
+                "IsSpecialised": false,
+                "JobID": 19,
+                "Level": 63,
+                "Name": "gladiator \/ paladin",
+                "UnlockedState": {
+                    "ID": 19,
+                    "Name": "Paladin"
+                }
+            },
+            {
+                "ClassID": 3,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 21,
+                "Level": 90,
+                "Name": "marauder \/ warrior",
+                "UnlockedState": {
+                    "ID": 21,
+                    "Name": "Warrior"
+                }
+            },
+            {
+                "ClassID": 32,
+                "ExpLevel": 643485,
+                "ExpLevelMax": 1387000,
+                "ExpLevelTogo": 743515,
+                "IsSpecialised": false,
+                "JobID": 32,
+                "Level": 60,
+                "Name": "dark knight \/ dark knight",
+                "UnlockedState": {
+                    "ID": 32,
+                    "Name": "Dark Knight"
+                }
+            },
+            {
+                "ClassID": 37,
+                "ExpLevel": 100000,
+                "ExpLevelMax": 1387000,
+                "ExpLevelTogo": 1287000,
+                "IsSpecialised": false,
+                "JobID": 37,
+                "Level": 60,
+                "Name": "gunbreaker \/ gunbreaker",
+                "UnlockedState": {
+                    "ID": 37,
+                    "Name": "Gunbreaker"
+                }
+            },
+            {
+                "ClassID": 6,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 24,
+                "Level": 90,
+                "Name": "conjurer \/ white mage",
+                "UnlockedState": {
+                    "ID": 24,
+                    "Name": "White Mage"
+                }
+            },
+            {
+                "ClassID": 26,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 28,
+                "Level": 90,
+                "Name": "arcanist \/ scholar",
+                "UnlockedState": {
+                    "ID": 28,
+                    "Name": "Scholar"
+                }
+            },
+            {
+                "ClassID": 33,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 33,
+                "Level": 90,
+                "Name": "astrologian \/ astrologian",
+                "UnlockedState": {
+                    "ID": 33,
+                    "Name": "Astrologian"
+                }
+            },
+            {
+                "ClassID": 40,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 40,
+                "Level": 90,
+                "Name": "sage \/ sage",
+                "UnlockedState": {
+                    "ID": 40,
+                    "Name": "Sage"
+                }
+            },
+            {
+                "ClassID": 2,
+                "ExpLevel": 3867,
+                "ExpLevelMax": 421000,
+                "ExpLevelTogo": 417133,
+                "IsSpecialised": false,
+                "JobID": 20,
+                "Level": 50,
+                "Name": "pugilist \/ monk",
+                "UnlockedState": {
+                    "ID": 20,
+                    "Name": "Monk"
+                }
+            },
+            {
+                "ClassID": 4,
+                "ExpLevel": 123891,
+                "ExpLevelMax": 421000,
+                "ExpLevelTogo": 297109,
+                "IsSpecialised": false,
+                "JobID": 22,
+                "Level": 50,
+                "Name": "lancer \/ dragoon",
+                "UnlockedState": {
+                    "ID": 22,
+                    "Name": "Dragoon"
+                }
+            },
+            {
+                "ClassID": 29,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 30,
+                "Level": 90,
+                "Name": "rogue \/ ninja",
+                "UnlockedState": {
+                    "ID": 30,
+                    "Name": "Ninja"
+                }
+            },
+            {
+                "ClassID": 34,
+                "ExpLevel": 0,
+                "ExpLevelMax": 421000,
+                "ExpLevelTogo": 421000,
+                "IsSpecialised": false,
+                "JobID": 34,
+                "Level": 50,
+                "Name": "samurai \/ samurai",
+                "UnlockedState": {
+                    "ID": 34,
+                    "Name": "Samurai"
+                }
+            },
+            {
+                "ClassID": 39,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 39,
+                "Level": 90,
+                "Name": "reaper \/ reaper",
+                "UnlockedState": {
+                    "ID": 39,
+                    "Name": "Reaper"
+                }
+            },
+            {
+                "ClassID": 5,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 23,
+                "Level": 90,
+                "Name": "archer \/ bard",
+                "UnlockedState": {
+                    "ID": 23,
+                    "Name": "Bard"
+                }
+            },
+            {
+                "ClassID": 31,
+                "ExpLevel": 924457,
+                "ExpLevelMax": 1387000,
+                "ExpLevelTogo": 462543,
+                "IsSpecialised": false,
+                "JobID": 31,
+                "Level": 60,
+                "Name": "machinist \/ machinist",
+                "UnlockedState": {
+                    "ID": 31,
+                    "Name": "Machinist"
+                }
+            },
+            {
+                "ClassID": 38,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 38,
+                "Level": 90,
+                "Name": "dancer \/ dancer",
+                "UnlockedState": {
+                    "ID": 38,
+                    "Name": "Dancer"
+                }
+            },
+            {
+                "ClassID": 7,
+                "ExpLevel": 254379,
+                "ExpLevelMax": 500000,
+                "ExpLevelTogo": 245621,
+                "IsSpecialised": false,
+                "JobID": 25,
+                "Level": 51,
+                "Name": "thaumaturge \/ black mage",
+                "UnlockedState": {
+                    "ID": 25,
+                    "Name": "Black Mage"
+                }
+            },
+            {
+                "ClassID": 26,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 27,
+                "Level": 90,
+                "Name": "arcanist \/ summoner",
+                "UnlockedState": {
+                    "ID": 27,
+                    "Name": "Summoner"
+                }
+            },
+            {
+                "ClassID": 35,
+                "ExpLevel": 0,
+                "ExpLevelMax": 421000,
+                "ExpLevelTogo": 421000,
+                "IsSpecialised": false,
+                "JobID": 35,
+                "Level": 50,
+                "Name": "red mage \/ red mage",
+                "UnlockedState": {
+                    "ID": 35,
+                    "Name": "Red Mage"
+                }
+            },
+            {
+                "ClassID": 36,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 36,
+                "Level": 0,
+                "Name": "blue mage \/ blue mage",
+                "UnlockedState": {
+                    "ID": null,
+                    "Name": "Blue Mage (Limited Job)"
+                }
+            },
+            {
+                "ClassID": 8,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 8,
+                "Level": 90,
+                "Name": "carpenter \/ carpenter",
+                "UnlockedState": {
+                    "ID": 8,
+                    "Name": "Carpenter"
+                }
+            },
+            {
+                "ClassID": 9,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": true,
+                "JobID": 9,
+                "Level": 90,
+                "Name": "blacksmith \/ blacksmith",
+                "UnlockedState": {
+                    "ID": 9,
+                    "Name": "Blacksmith"
+                }
+            },
+            {
+                "ClassID": 10,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 10,
+                "Level": 90,
+                "Name": "armorer \/ armorer",
+                "UnlockedState": {
+                    "ID": 10,
+                    "Name": "Armorer"
+                }
+            },
+            {
+                "ClassID": 11,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 11,
+                "Level": 90,
+                "Name": "goldsmith \/ goldsmith",
+                "UnlockedState": {
+                    "ID": 11,
+                    "Name": "Goldsmith"
+                }
+            },
+            {
+                "ClassID": 12,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 12,
+                "Level": 90,
+                "Name": "leatherworker \/ leatherworker",
+                "UnlockedState": {
+                    "ID": 12,
+                    "Name": "Leatherworker"
+                }
+            },
+            {
+                "ClassID": 13,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": true,
+                "JobID": 13,
+                "Level": 90,
+                "Name": "weaver \/ weaver",
+                "UnlockedState": {
+                    "ID": 13,
+                    "Name": "Weaver"
+                }
+            },
+            {
+                "ClassID": 14,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": true,
+                "JobID": 14,
+                "Level": 90,
+                "Name": "alchemist \/ alchemist",
+                "UnlockedState": {
+                    "ID": 14,
+                    "Name": "Alchemist"
+                }
+            },
+            {
+                "ClassID": 15,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 15,
+                "Level": 90,
+                "Name": "culinarian \/ culinarian",
+                "UnlockedState": {
+                    "ID": 15,
+                    "Name": "Culinarian"
+                }
+            },
+            {
+                "ClassID": 16,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 16,
+                "Level": 90,
+                "Name": "miner \/ miner",
+                "UnlockedState": {
+                    "ID": 16,
+                    "Name": "Miner"
+                }
+            },
+            {
+                "ClassID": 17,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 17,
+                "Level": 90,
+                "Name": "botanist \/ botanist",
+                "UnlockedState": {
+                    "ID": 17,
+                    "Name": "Botanist"
+                }
+            },
+            {
+                "ClassID": 18,
+                "ExpLevel": 0,
+                "ExpLevelMax": 0,
+                "ExpLevelTogo": 0,
+                "IsSpecialised": false,
+                "JobID": 18,
+                "Level": 90,
+                "Name": "fisher \/ fisher",
+                "UnlockedState": {
+                    "ID": 18,
+                    "Name": "Fisher"
+                }
+            }
+        ],
+        "ClassJobsBozjan": {
+            "Level": 7,
+            "Mettle": 18096,
+            "Name": "Resistance Rank"
+        },
+        "ClassJobsElemental": {
+            "ExpLevel": 63744,
+            "ExpLevelMax": 114180,
+            "ExpLevelTogo": 50436,
+            "Level": 15,
+            "Name": "Elemental Level"
+        },
+        "DC": "Crystal",
+        "FreeCompanyId": "9233927348481567538",
+        "FreeCompanyName": "Hydaelyn's Haven",
+        "GearSet": {
+            "Attributes": {
+                "1": 185,
+                "2": 948,
+                "3": 947,
+                "4": 177,
+                "5": 186,
+                "6": 218,
+                "7": 10979,
+                "8": 10000,
+                "19": 354,
+                "20": 948,
+                "21": 885,
+                "22": 626,
+                "24": 885,
+                "27": 611,
+                "33": 177,
+                "34": 186,
+                "44": 597,
+                "45": 626,
+                "46": 360
+            },
+            "ClassID": 31,
+            "Gear": {
+                "Body": {
+                    "Creator": null,
+                    "Dye": null,
+                    "ID": 16360,
+                    "Materia": [],
+                    "Mirage": 11220
+                },
+                "Bracelets": {
+                    "Creator": null,
+                    "Dye": null,
+                    "ID": 16395,
+                    "Materia": [],
+                    "Mirage": null
+                },
+                "Earrings": {
+                    "Creator": null,
+                    "Dye": null,
+                    "ID": 33648,
+                    "Materia": [],
+                    "Mirage": 37081
+                },
+                "Feet": {
+                    "Creator": null,
+                    "Dye": null,
+                    "ID": 16363,
+                    "Materia": [],
+                    "Mirage": 30061
+                },
+                "Hands": {
+                    "Creator": null,
+                    "Dye": null,
+                    "ID": 16361,
+                    "Materia": [],
+                    "Mirage": 36846
+                },
+                "Head": {
+                    "Creator": null,
+                    "Dye": null,
+                    "ID": 16359,
+                    "Materia": [],
+                    "Mirage": 17543
+                },
+                "Legs": {
+                    "Creator": null,
+                    "Dye": 5804,
+                    "ID": 16362,
+                    "Materia": [],
+                    "Mirage": 35870
+                },
+                "MainHand": {
+                    "Creator": null,
+                    "Dye": null,
+                    "ID": 16334,
+                    "Materia": [],
+                    "Mirage": 11203
+                },
+                "Necklace": {
+                    "Creator": null,
+                    "Dye": null,
+                    "ID": 16390,
+                    "Materia": [
+                        5723
+                    ],
+                    "Mirage": 37299
+                },
+                "Ring1": {
+                    "Creator": null,
+                    "Dye": null,
+                    "ID": 16400,
+                    "Materia": [
+                        5717
+                    ],
+                    "Mirage": null
+                },
+                "Ring2": {
+                    "Creator": null,
+                    "Dye": null,
+                    "ID": 16400,
+                    "Materia": [],
+                    "Mirage": null
+                },
+                "SoulCrystal": {
+                    "Creator": null,
+                    "Dye": null,
+                    "ID": 8574,
+                    "Materia": [],
+                    "Mirage": null
+                }
+            },
+            "GearKey": "31_31",
+            "JobID": 31,
+            "Level": 60
+        },
+        "Gender": 2,
+        "GrandCompany": {
+            "NameID": 3,
+            "RankID": 11
+        },
+        "GuardianDeity": 4,
+        "ID": 16219882,
+        "Lang": null,
+        "Name": "Yavanne Kementari",
+        "Nameday": "1st Sun of the 1st Astral Moon",
+        "ParseDate": 1664841000,
+        "Portrait": "https:\/\/img2.finalfantasyxiv.com\/f\/f45e624dc464457a1bfabb9e0bdb5517_2e97c13fdd593d15d543093f8a37b6f0fl0_640x873.jpg?1664840086",
+        "PvPTeamId": null,
+        "Race": 2,
+        "Server": "Malboro",
+        "Title": 332,
+        "TitleTop": true,
+        "Town": 2,
+        "Tribe": 4
+    },
+    "FreeCompany": null,
+    "FreeCompanyMembers": null,
+    "Friends": null,
+    "FriendsPublic": null,
+    "Minions": null,
+    "Mounts": null,
+    "PvPTeam": null
+}
