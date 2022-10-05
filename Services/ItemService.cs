@@ -15,10 +15,22 @@ namespace XIV.Services
 	    _logger = logger;
 	}
 
-	public async Task<object> GetItemDetails(int itemID)
+	//TODO: Build this
+	public async Task<ItemDetail> GetItemDetails(int itemID)
 	{
 	    using var client = new HttpClient();
-	    return new Object();
+	    var queryString = System.Web.HttpUtility.ParseQueryString(string.Empty);
+	    queryString.Add("private_key", (string)_config["apiKey"]);
+
+	    var queryStringCompiled = $"{(string)_config["ItemSearch"]}/{itemID}";
+	    _logger.Log(LogLevel.Information, queryStringCompiled, null);
+
+	    var response = await client.GetAsync(queryStringCompiled);
+	    var responseContent = await response.Content.ReadAsStringAsync();
+	    _logger.Log(LogLevel.Information, responseContent, null);
+	    var item = JsonSerializer.Deserialize<ItemDetail>(responseContent);
+	
+	    return item;
 	}
     }
 }

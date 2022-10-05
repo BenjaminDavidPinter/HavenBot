@@ -7,6 +7,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<XIV.Services.CharacterService>();
+builder.Services.AddTransient<XIV.Services.ItemService>();
+
 
 var app = builder.Build();
 
