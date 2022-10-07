@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
+using System.Text;
 using XIV.Models;
 using XIV.Services;
 
@@ -42,33 +43,31 @@ public class XivCharacterController : ControllerBase
         else
         {
             var cxtrDetails = await _charServ.GetCharacterDetails(relevantChar.ID.Value);
-	    
-	    var headDetails = await _itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Head.ID.Value);
-	    var bodyDetails = await _itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Body.ID.Value);
-	    var braceletDetails = await _itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Bracelets.ID.Value);
-	    var earringsDetails = await _itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Earrings.ID.Value);
-	    var feetDetails = await _itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Feet.ID.Value);
-	    var handsDetails = await _itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Hands.ID.Value);
-	    var legsDetails = await _itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Legs.ID.Value);
-	    var mainHandDetails = await _itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.MainHand.ID.Value);
-	    var necklaceDetails = await _itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Necklace.ID.Value);
-	    var ring1Details = await _itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Ring1.ID.Value);
-	    var ring2Details = await _itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Ring2.ID.Value);
-	    var soulCrystalDetails = await _itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.SoulCrystal.ID.Value);
+	    List<Task<ItemDetail>> itemTasks = new List<Task<ItemDetail>>();
 
-	    return $"{cxtrDetails.Character.Name} the {cxtrDetails.Character.ActiveClassJob.Name}\n" + 
-                    $"\t Head: {headDetails.Name}\n" +  
-                    $"\t Body: {bodyDetails.Name}\n" +  
-                    $"\t Bracelets: {braceletDetails.Name}\n" +  
-                    $"\t Earrings: {earringsDetails.Name}\n" + 
-                    $"\t Feet: {feetDetails.Name}\n" + 
-                    $"\t Hands: {handsDetails.Name}\n" + 
-                    $"\t Legs: {legsDetails.Name}\n" + 
-                    $"\t Main Hand: {mainHandDetails.Name}\n" +  
-                    $"\t Necklace: {necklaceDetails.Name}\n" + 
-                    $"\t Ring: {ring1Details.Name}\n" +  
-                    $"\t Ring: {ring2Details.Name}\n" +  
-                    $"\t Crystal: {soulCrystalDetails.Name}"; 
+	    itemTasks.Add(_itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Head.ID.Value));
+	    itemTasks.Add(_itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Body.ID.Value));
+	    itemTasks.Add(_itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Bracelets.ID.Value));
+	    itemTasks.Add(_itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Earrings.ID.Value));
+	    itemTasks.Add(_itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Feet.ID.Value));
+	    itemTasks.Add(_itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Hands.ID.Value));
+	    itemTasks.Add(_itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Legs.ID.Value));
+	    itemTasks.Add(_itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.MainHand.ID.Value));
+	    itemTasks.Add(_itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Necklace.ID.Value));
+	    itemTasks.Add(_itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Ring1.ID.Value));
+	    itemTasks.Add(_itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Ring2.ID.Value));
+	    itemTasks.Add(_itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.SoulCrystal.ID.Value));
+
+	    Task.WaitAll(itemTasks.ToArray());
+
+	    StringBuilder sb = new StringBuilder();
+	    sb.Append($"{cxtrDetails.Character.Name} the {cxtrDetails.Character.ActiveClassJob.Name}\n");  
+	    foreach(var t in itemTasks)
+	    {
+	    	sb.Append($"-{t.Result.Name}\n");	
+	    }
+
+	    return sb.ToString(); 
         }
     }
 }
