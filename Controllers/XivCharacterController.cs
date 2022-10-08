@@ -27,7 +27,6 @@ public class XivCharacterController : ControllerBase
     }
 
     [HttpGet]
-    [Route("Get")]
     public async Task<string> Get(string CharacterName)
     {
         var cxtr = await _charServ.SearchByName(CharacterName);
@@ -45,6 +44,9 @@ public class XivCharacterController : ControllerBase
             var cxtrDetails = await _charServ.GetCharacterDetails(relevantChar.ID.Value);
 	    List<Task<ItemDetail>> itemTasks = new List<Task<ItemDetail>>();
 
+
+	    //TODO: Maybe move getting ALL chacter items into a service call? Kinda ugly here
+	    //TOOD: All these generate null dereference warnings, fix that with nullability operators 
 	    itemTasks.Add(_itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Head.ID.Value));
 	    itemTasks.Add(_itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Body.ID.Value));
 	    itemTasks.Add(_itemServ.GetItemDetails(cxtrDetails.Character.GearSet.Gear.Bracelets.ID.Value));
@@ -60,6 +62,7 @@ public class XivCharacterController : ControllerBase
 
 	    Task.WaitAll(itemTasks.ToArray());
 
+	    //TODO: Move to 'ToString()' overload somewhere...
 	    StringBuilder sb = new StringBuilder();
 	    sb.Append($"{cxtrDetails.Character.Name} the {cxtrDetails.Character.ActiveClassJob.Name}\n");  
 	    foreach(var t in itemTasks)
